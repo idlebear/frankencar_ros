@@ -27,7 +27,8 @@ Then build everything using
 sudo apt-get install git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev -y
 ./scripts/setup_udev_rules.sh
 mkdir build && cd build
-cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=release -DFORCE_RSUSB_BACKEND=false -DBUILD_WITH_CUDA=true && make -j$(($(nproc)-1)) && sudo make install
+cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=release -DFORCE_RSUSB_BACKEND=false -DBUILD_PYTHON_BINDINGS=true -DBUILD_WITH_CUDA=true -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
+make -j$(($(nproc)-1)) && sudo make install
 ```
 You may also want to include the python wrappers, although with this current release only python3 is supported.
 
