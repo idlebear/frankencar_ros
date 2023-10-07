@@ -16,8 +16,8 @@ max_acceleration: 2.5 # meters/second^2
 throttle_smoother_rate: 75.0 # messages/sec
 
 # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
-steering_angle_to_servo_gain: -1.8
-steering_angle_to_servo_offset: 0.4
+steering_angle_to_servo_gain: 1.8
+steering_angle_to_servo_offset: 0.5
 
 # publish odom to base link tf
 vesc_to_odom/publish_tf: false
@@ -27,11 +27,7 @@ wheelbase: .29
 
 vesc_driver:
   port: /dev/sensors/vesc
-<<<<<<< HEAD
   imu_frame: imu
-=======
-  imu_frame: imu 
->>>>>>> 79e62d0e5606693f635b13f6aa0c36f2911c82e3
   duty_cycle_min: 0.0
   duty_cycle_max: 0.0
   current_min: 0.0
