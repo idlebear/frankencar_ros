@@ -27,11 +27,7 @@ wheelbase: .29
 
 vesc_driver:
   port: /dev/sensors/vesc
-<<<<<<< HEAD
   imu_frame: imu
-=======
-  imu_frame: imu 
->>>>>>> 79e62d0e5606693f635b13f6aa0c36f2911c82e3
   duty_cycle_min: 0.0
   duty_cycle_max: 0.0
   current_min: 0.0
