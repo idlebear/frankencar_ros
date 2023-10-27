@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<robot name="frankencar"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <transmission name="Revolute_6_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_6_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_7_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_7">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_7_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_8_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_8">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_8_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_9_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_9">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_9_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_22_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_22">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_22_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_39_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_39">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_39_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_40_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_40">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_40_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_41_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_41">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_41_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="Revolute_42_tran">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Revolute_42">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Revolute_42_actr">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+</robot>
