@@ -1,0 +1,43 @@
+frankencar_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  Revolute_6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_6
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_7
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_8_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_8
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_9_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_9
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_22_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_22
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_39_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_39
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_40_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_40
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_41_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_41
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Revolute_42_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Revolute_42
+    pid: {p: 100.0, i: 0.01, d: 10.0}

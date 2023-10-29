@@ -1,4 +1,4 @@
 [submodule "f1tenth/f1tenth_system"]
-	path = f1tenth/f1tenth_system
+	path = frankencar_ros/f1tenth/f1tenth_system
 	url = git@github.com:idlebear/f1tenth_system.git
 	branch = melodic

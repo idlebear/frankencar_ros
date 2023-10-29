@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<robot name="frankencar"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="body_color" value="Gazebo/Silver" />
+
+    <gazebo>
+        <plugin name="control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+    <gazebo reference="base_link">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+        <gravity>true</gravity>
+    </gazebo>
+
+    <gazebo reference="Wheel_v1_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Wheel_v1_4">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Wheel_v1_3">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Wheel_v1_2">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Spacer_4">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Spacer_3">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Spacer_2">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Spacer_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="YDLidar_Mount_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Mounting_Plate__1__1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="YDLidar_base_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="YDLidar_scanner_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Upper_Deck_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Shaft_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Shaft_2">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Shaft_3">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Shaft_4">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="VESC_6_3D_solid_model_v1_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="vesc_link_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Connector_2">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Connector_3">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Connector_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Connector_4">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="Base_1">
+        <material>${body_color}</material>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+</robot>

@@ -1,0 +1,726 @@
+<?xml version="1.0" ?>
+<robot name="frankencar"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find frankencar_description)/urdf/materials.xacro" />
+    <xacro:include filename="$(find frankencar_description)/urdf/frankencar.trans" />
+    <xacro:include filename="$(find frankencar_description)/urdf/frankencar.gazebo" />
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0 0.0 2.5" rpy="0 0 0"/>
+            <mass value="0.00098125"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 2.5" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 2.5" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Wheel_v1_1">
+        <inertial>
+            <origin xyz="7.306618442569523e-08 -0.016109137965206535 2.0831376828372994e-07" rpy="0 0 0"/>
+            <mass value="0.7262730630377828"/>
+            <inertia ixx="0.000486" iyy="0.000757" izz="0.000463" ixy="-0.0" iyz="0.0" ixz="7e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 -0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 -0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Wheel_v1_4">
+        <inertial>
+            <origin xyz="-7.306618453227664e-08 0.016109137965206702 2.0831376822474934e-07" rpy="0 0 0"/>
+            <mass value="0.7262730630377828"/>
+            <inertia ixx="0.000486" iyy="0.000757" izz="0.000463" ixy="-0.0" iyz="-0.0" ixz="-7e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Wheel_v1_3">
+        <inertial>
+            <origin xyz="7.306618454716585e-08 -0.016109137965206702 2.08313768214341e-07" rpy="0 0 0"/>
+            <mass value="0.7262730630377828"/>
+            <inertia ixx="0.000486" iyy="0.000757" izz="0.000463" ixy="-0.0" iyz="0.0" ixz="7e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.2855 -0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.2855 -0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Wheel_v1_2">
+        <inertial>
+            <origin xyz="-7.306618465818815e-08 0.016109137965206827 2.0831376823515768e-07" rpy="0 0 0"/>
+            <mass value="0.7262730630377828"/>
+            <inertia ixx="0.000486" iyy="0.000757" izz="0.000463" ixy="-0.0" iyz="-0.0" ixz="-7e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.2855 0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.2855 0.135 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Wheel_v1_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Spacer_4">
+        <inertial>
+            <origin xyz="-5.228317778716018e-13 -4.2131213649765353e-07 0.015000000000000041" rpy="0 0 0"/>
+            <mass value="0.004624031687002273"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.20775 0.04129 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.20775 0.04129 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Spacer_3">
+        <inertial>
+            <origin xyz="-5.228317778716018e-13 -4.2131213649765353e-07 0.015000000000000041" rpy="0 0 0"/>
+            <mass value="0.004624031687002273"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.20775 -0.03871 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.20775 -0.03871 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Spacer_2">
+        <inertial>
+            <origin xyz="-5.228595334472175e-13 -4.2131213649765353e-07 0.015000000000000041" rpy="0 0 0"/>
+            <mass value="0.004624031687002273"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.15675 0.04129 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.15675 0.04129 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Spacer_1">
+        <inertial>
+            <origin xyz="-5.228595334472175e-13 -4.2131213649765353e-07 0.015000000000000041" rpy="0 0 0"/>
+            <mass value="0.004624031687002273"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.15675 -0.03871 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.15675 -0.03871 -0.088" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Spacer_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="YDLidar_Mount_1">
+        <inertial>
+            <origin xyz="-0.021733042548399667 -0.04000042131213932 0.0024918278144273748" rpy="0 0 0"/>
+            <mass value="0.23321067334727044"/>
+            <inertia ixx="0.000147" iyy="9.1e-05" izz="0.000237" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.20525 -0.03871 -0.118" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_Mount_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.20525 -0.03871 -0.118" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_Mount_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Mounting_Plate__1__1">
+        <inertial>
+            <origin xyz="-0.04050003300000002 -4.2131213531045215e-07 0.0015080614273471071" rpy="0 0 0"/>
+            <mass value="0.1030089322939971"/>
+            <inertia ixx="3.7e-05" iyy="3.7e-05" izz="7.4e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.219923 0.00129 -0.123" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Mounting_Plate__1__1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.219923 0.00129 -0.123" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Mounting_Plate__1__1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="YDLidar_base_1">
+        <inertial>
+            <origin xyz="3.5697862405897895e-05 0.0008827109025858552 0.010676690800013544" rpy="0 0 0"/>
+            <mass value="0.7132627257963531"/>
+            <inertia ixx="0.00027" iyy="0.000266" izz="0.00048" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.179423 0.00129 -0.126" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_base_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.179423 0.00129 -0.126" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_base_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="YDLidar_scanner_1">
+        <inertial>
+            <origin xyz="0.0002755907313267969 -0.0010194370544055749 0.010248297479032442" rpy="0 0 0"/>
+            <mass value="0.6266154776695539"/>
+            <inertia ixx="0.000225" iyy="0.000226" izz="0.000403" ixy="-3e-06" iyz="1e-06" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.179459 0.000265 -0.1475" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_scanner_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.179459 0.000265 -0.1475" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/YDLidar_scanner_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Upper_Deck_1">
+        <inertial>
+            <origin xyz="-0.08316155178812779 -0.08300042131213647 0.0025000000000000022" rpy="0 0 0"/>
+            <mass value="1.7454318507896642"/>
+            <inertia ixx="0.003851" iyy="0.010606" izz="0.014449" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.21125 -0.08171 -0.083" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Upper_Deck_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.21125 -0.08171 -0.083" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Upper_Deck_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Shaft_1">
+        <inertial>
+            <origin xyz="6.706586884063482e-15 -0.048804498753229945 2.626046050717423e-07" rpy="0 0 0"/>
+            <mass value="0.13496150826700806"/>
+            <inertia ixx="0.000111" iyy="4e-06" izz="0.000111" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Shaft_2">
+        <inertial>
+            <origin xyz="6.706586884063482e-15 0.04880449875322993 2.6260460507521177e-07" rpy="0 0 0"/>
+            <mass value="0.13496150826700806"/>
+            <inertia ixx="0.000111" iyy="4e-06" izz="0.000111" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 -0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 -0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Shaft_3">
+        <inertial>
+            <origin xyz="6.661338147750939e-15 0.04880449875322992 2.6260460505786454e-07" rpy="0 0 0"/>
+            <mass value="0.13496150826700806"/>
+            <inertia ixx="0.000111" iyy="4e-06" izz="0.000111" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.2855 -0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.2855 -0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Shaft_4">
+        <inertial>
+            <origin xyz="6.661338147750939e-15 -0.04880449875322997 2.6260460505092564e-07" rpy="0 0 0"/>
+            <mass value="0.13496150826700806"/>
+            <inertia ixx="0.000111" iyy="4e-06" izz="0.000111" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.2855 0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.2855 0.025 -0.030057" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Shaft_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="VESC_6_3D_solid_model_v1_1">
+        <inertial>
+            <origin xyz="0.0008353690814925097 -0.0005436226505072628 -0.009032838392023054" rpy="0 0 0"/>
+            <mass value="0.7686826166154379"/>
+            <inertia ixx="0.000602" iyy="0.000392" izz="0.000953" ixy="-0.000114" iyz="-3e-06" ixz="-3e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.1157 0.002581 -0.083" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/VESC_6_3D_solid_model_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.1157 0.002581 -0.083" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/VESC_6_3D_solid_model_v1_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="vesc_link_1">
+        <inertial>
+            <origin xyz="2.910449659054848e-13 -4.2131142341549944e-07 -0.0005003404255288224" rpy="0 0 0"/>
+            <mass value="7.363524232796591e-06"/>
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.1175 0.00129 -0.065128" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/vesc_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.1175 0.00129 -0.065128" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/vesc_link_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Connector_2">
+        <inertial>
+            <origin xyz="-5.551115123125783e-17 -4.2131213648377575e-07 0.03900000000000001" rpy="0 0 0"/>
+            <mass value="0.030777554908688484"/>
+            <inertia ixx="1.6e-05" iyy="1.6e-05" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.21125 -0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.21125 -0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_2.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Connector_3">
+        <inertial>
+            <origin xyz="-4.163336342344337e-17 -4.213121365115313e-07 0.03900000000000001" rpy="0 0 0"/>
+            <mass value="0.030777554908688484"/>
+            <inertia ixx="1.6e-05" iyy="1.6e-05" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.07425 -0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.07425 -0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Connector_1">
+        <inertial>
+            <origin xyz="0.0 4.213121365115313e-07 0.03900000000000001" rpy="0 0 0"/>
+            <mass value="0.030777554908688484"/>
+            <inertia ixx="1.6e-05" iyy="1.6e-05" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.21125 0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.21125 0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Connector_4">
+        <inertial>
+            <origin xyz="-2.7755575615628914e-17 4.213121365115313e-07 0.03900000000000001" rpy="0 0 0"/>
+            <mass value="0.030777554908688484"/>
+            <inertia ixx="1.6e-05" iyy="1.6e-05" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.07425 0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.07425 0.08171 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Connector_4.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Base_1">
+        <inertial>
+            <origin xyz="0.14272522509752217 0.0 0.008012604246406221" rpy="0 0 0"/>
+            <mass value="2.897837049032521"/>
+            <inertia ixx="0.005327" iyy="0.033774" izz="0.03795" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+        </inertial>
+        <visual>
+            <origin xyz="-0.0 -0.0 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Base_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="-0.0 -0.0 -0.005" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://frankencar_description/meshes/Base_1.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="Revolute_6" type="continuous">
+        <origin xyz="0.0 0.11 0.0" rpy="0 0 0"/>
+        <parent link="Shaft_2"/>
+        <child link="Wheel_v1_1"/>
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <joint name="Revolute_7" type="continuous">
+        <origin xyz="0.0 -0.11 0.0" rpy="0 0 0"/>
+        <parent link="Shaft_1"/>
+        <child link="Wheel_v1_4"/>
+        <axis xyz="0.0 -1.0 0.0"/>
+    </joint>
+
+    <joint name="Revolute_8" type="continuous">
+        <origin xyz="0.0 0.11 0.0" rpy="0 0 0"/>
+        <parent link="Shaft_3"/>
+        <child link="Wheel_v1_3"/>
+        <axis xyz="0.0 1.0 -0.0"/>
+    </joint>
+
+    <joint name="Revolute_9" type="continuous">
+        <origin xyz="0.0 -0.11 0.0" rpy="0 0 0"/>
+        <parent link="Shaft_4"/>
+        <child link="Wheel_v1_2"/>
+        <axis xyz="0.0 -1.0 0.0"/>
+    </joint>
+
+    <joint name="Rigid_15" type="fixed">
+        <origin xyz="-0.0035 -0.123 0.005" rpy="0 0 0"/>
+        <parent link="Upper_Deck_1"/>
+        <child link="Spacer_4"/>
+    </joint>
+
+    <joint name="Rigid_16" type="fixed">
+        <origin xyz="-0.0035 -0.043 0.005" rpy="0 0 0"/>
+        <parent link="Upper_Deck_1"/>
+        <child link="Spacer_3"/>
+    </joint>
+
+    <joint name="Rigid_17" type="fixed">
+        <origin xyz="-0.0545 -0.123 0.005" rpy="0 0 0"/>
+        <parent link="Upper_Deck_1"/>
+        <child link="Spacer_2"/>
+    </joint>
+
+    <joint name="Rigid_18" type="fixed">
+        <origin xyz="-0.0545 -0.043 0.005" rpy="0 0 0"/>
+        <parent link="Upper_Deck_1"/>
+        <child link="Spacer_1"/>
+    </joint>
+
+    <joint name="Rigid_19" type="fixed">
+        <origin xyz="-0.0025 0.0 0.03" rpy="0 0 0"/>
+        <parent link="Spacer_3"/>
+        <child link="YDLidar_Mount_1"/>
+    </joint>
+
+    <joint name="Rigid_20" type="fixed">
+        <origin xyz="0.014673 -0.04 0.005" rpy="0 0 0"/>
+        <parent link="YDLidar_Mount_1"/>
+        <child link="Mounting_Plate__1__1"/>
+    </joint>
+
+    <joint name="Rigid_21" type="fixed">
+        <origin xyz="-0.0405 0.0 0.003" rpy="0 0 0"/>
+        <parent link="Mounting_Plate__1__1"/>
+        <child link="YDLidar_base_1"/>
+    </joint>
+
+    <joint name="Revolute_22" type="continuous">
+        <origin xyz="3.6e-05 0.001025 0.0215" rpy="0 0 0"/>
+        <parent link="YDLidar_base_1"/>
+        <child link="YDLidar_scanner_1"/>
+        <axis xyz="0.0 -0.0 1.0"/>
+    </joint>
+
+    <joint name="Rigid_38" type="fixed">
+        <origin xyz="0.0 0.0 0.078" rpy="0 0 0"/>
+        <parent link="Connector_2"/>
+        <child link="Upper_Deck_1"/>
+    </joint>
+
+    <joint name="Revolute_39" type="revolute">
+        <origin xyz="0.0 -0.025 0.025057" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Shaft_1"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit upper="0.261799" lower="-0.261799" effort="100" velocity="100"/>
+    </joint>
+
+    <gazebo reference='Revolute_39'>
+        <springReference>0.0</springReference>
+        <springStiffness>100</springStiffness>
+    </gazebo>
+
+    <torsional_spring stiffness = "100000" rest_angle = "0.0">
+        <joint name = "Revolute_39"/>
+    </torsional_spring>
+
+    <joint name="Revolute_40" type="revolute">
+        <origin xyz="0.0 0.025 0.025057" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Shaft_2"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit upper="0.261799" lower="-0.261799" effort="100" velocity="100"/>
+    </joint>
+
+    <gazebo reference='Revolute_40'>
+        <springReference>0.0</springReference>
+        <springStiffness>100</springStiffness>
+    </gazebo>
+
+    <torsional_spring stiffness = "100000" rest_angle = "0.0">
+        <joint name = "Revolute_40"/>
+    </torsional_spring>
+
+    <joint name="Revolute_41" type="revolute">
+        <origin xyz="0.2855 0.025 0.025057" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Shaft_3"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit upper="0.261799" lower="-0.261799" effort="100" velocity="100"/>
+    </joint>
+
+    <gazebo reference='Revolute_41'>
+        <springReference>0.0</springReference>
+        <springStiffness>100</springStiffness>
+    </gazebo>
+
+    <torsional_spring stiffness = "100000" rest_angle = "0.0">
+        <joint name = "Revolute_41"/>
+    </torsional_spring>
+
+    <joint name="Revolute_42" type="revolute">
+        <origin xyz="0.2855 -0.025 0.025057" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Shaft_4"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit upper="0.261799" lower="-0.261799" effort="100" velocity="100"/>
+    </joint>
+
+    <torsional_spring stiffness = "100000" rest_angle = "0.0">
+        <joint name = "Revolute_42"/>
+    </torsional_spring>
+
+    <gazebo reference='Revolute_42'>
+        <springReference>0.0</springReference>
+        <springStiffness>100</springStiffness>
+    </gazebo>
+
+    <joint name="Rigid_43" type="fixed">
+        <origin xyz="-0.09555 -0.084291 0.0" rpy="0 0 0"/>
+        <parent link="Upper_Deck_1"/>
+        <child link="VESC_6_3D_solid_model_v1_1"/>
+    </joint>
+
+    <joint name="Rigid_44" type="fixed">
+        <origin xyz="0.0018 0.001291 -0.017872" rpy="0 0 0"/>
+        <parent link="VESC_6_3D_solid_model_v1_1"/>
+        <child link="vesc_link_1"/>
+    </joint>
+
+    <joint name="Rigid_45" type="fixed">
+        <origin xyz="0.21125 0.08171 0.0" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Connector_2"/>
+    </joint>
+
+    <joint name="Rigid_46" type="fixed">
+        <origin xyz="0.07425 0.08171 0.0" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Connector_3"/>
+    </joint>
+
+    <joint name="Rigid_47" type="fixed">
+        <origin xyz="0.21125 -0.08171 0.0" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Connector_1"/>
+    </joint>
+
+    <joint name="Rigid_48" type="fixed">
+        <origin xyz="0.07425 -0.08171 0.0" rpy="0 0 0"/>
+        <parent link="Base_1"/>
+        <child link="Connector_4"/>
+    </joint>
+
+    <joint name="Rigid_49" type="fixed">
+        <origin xyz="0.0 0.0 0.005" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="Base_1"/>
+    </joint>
+
+</robot>
