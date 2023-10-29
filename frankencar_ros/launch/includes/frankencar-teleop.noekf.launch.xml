@@ -3,7 +3,7 @@
     <arg name="racecar_version" default="frankencar" />
     <arg name="run_camera" default="false"/>
 
-    <remap from="/vesc/sensors/imu/raw" to="/imu_data" /> 
+    <remap from="/vesc/sensors/imu/raw" to="/imu_data" />
     <remap from="/vesc/odom" to="/odom" />
     <group ns="vesc">
         <!-- joystick node -->
@@ -26,7 +26,7 @@
     </include>
 
     <!-- static transforms, e.g. base_link to imu -->
-    <include file="$(find frankencar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
-
+    <!-- <include file="$(find frankencar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" /> -->
+    <include file="$(find frankencar_description)/launch/run.xml" />
 
 </launch>

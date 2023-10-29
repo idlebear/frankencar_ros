@@ -1,6 +1,6 @@
-
 laser_node:
   device: /dev/sensors/scan
+  laser_frame_id: YDLidar_scanner_1
 
 imu_node:
   device: /dev/imu
